@@ -1,0 +1,64 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabletap - dashboard</title>
+
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+</head>
+
+<body class="pb-40">
+    
+    {% block section %}
+        {% include 'sidebar.html' %}
+    {% endblock %}
+    
+    
+    <div id="main-display" class="p-3 sm:ml-64">
+        {% block main %}
+            {% include 'main_section.html' %}
+        {% endblock %}
+    </div>
+
+
+    {% block modal %}
+        {% include 'modal.html'%}
+    {% endblock %}
+    
+    <script>
+        function handleSideBarClick(pageName){
+            document.getElementById("order").classList.add("hidden")
+            document.getElementById("table").classList.add("hidden")
+            document.getElementById("menu").classList.add("hidden")
+            document.getElementById("dashboardHome").classList.add("hidden")
+            document.getElementById("profile").classList.add("hidden")
+            document.getElementById("restaurantSetting").classList.add("hidden")
+            if (pageName == "order"){
+                document.getElementById("order").classList.remove("hidden")
+            }
+            else if (pageName == "table"){
+                document.getElementById("table").classList.remove("hidden")
+            }
+            else if (pageName =="menu"){
+                document.getElementById("menu").classList.remove("hidden")
+            }  
+            else if (pageName =="dashboardHome"){
+                document.getElementById("dashboardHome").classList.remove("hidden")
+            }
+            else if (pageName == "profile"){
+                document.getElementById("profile").classList.remove("hidden")
+            }
+            else{
+                document.getElementById("restaurantSetting").classList.remove("hidden")
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>

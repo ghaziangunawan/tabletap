@@ -1,0 +1,310 @@
+<div id="showorder-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+    <div class="relative w-xl max-w-7xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
+                <h3 class="text-xl font-semibold text-gray-900 ">
+                    Order details
+                </h3>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4 flex flex-col">
+                <h1 class="font-semibold">Table No : 2</h1>
+                <h1 class="font-semibold">Notes : </h1>
+                <div class="border-1 rounded-2xl p-2 bg-gray-200">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse rounded-b">
+                <button data-modal-hide="showorder-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="confirmdelete-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+    <div class="relative w-xl max-w-7xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
+                <h3 class="text-xl font-semibold text-gray-900 ">
+                    Confirm Deletion
+                </h3>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4 flex flex-col">
+                <div class="border-1 rounded-2xl p-2 ">
+                    <p>Are you sure you want to delete this ?</p>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse rounded-b">
+                <button data-modal-hide="confirmdelete-modal" type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Yes</button>
+                <button data-modal-hide="confirmdelete-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="addtable-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-xl p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+    <div class="relative w-full max-w-7xl max-h-full flex justify-center">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm p-10">
+            <!-- Modal header -->
+            <form class="space-y-5">
+                <div>
+                    <label for="table-name" class="block text-sm font-medium text-gray-700">Table name</label>
+                    <input placeholder="Sofa seating 1" type="text" id="table-name" name="table-name" class="p-2 mt-1 block w-fit rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+                </div>
+                <div>
+                    <label for="capacity" class="block text-sm font-medium text-gray-700">Capacity</label>
+                    <input type="number" placeholder="4" min="1" id="capacity" name="capacity" class="p-2 mt-1 block w-fit rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+                </div>
+                <div class="flex flex-col gap-y-2">
+                </div>
+            </form>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse rounded-b">
+                <button data-modal-hide="addtable-modal" type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+                <button data-modal-hide="addtable-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="edittable-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-xl p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+    <div class="relative w-full max-w-7xl max-h-full flex justify-center">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm p-10">
+            <!-- Modal header -->
+            <form class="space-y-5">
+                <div>
+                    <label for="table-name" class="block text-sm font-medium text-gray-700">Table name</label>
+                    <input placeholder="Sofa seating 1" type="text" id="table-name" name="table-name" class="p-2 mt-1 block w-fit rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+                </div>
+                <div>
+                    <label for="capacity" class="block text-sm font-medium text-gray-700">Capacity</label>
+                    <input type="number" placeholder="4" min="1" id="capacity" name="capacity" class="p-2 mt-1 block w-fit rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+                </div>
+                <div class="flex flex-col gap-y-2">
+                </div>
+            </form>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse rounded-b">
+                <button data-modal-hide="edittable-modal" type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Save</button>
+                <button data-modal-hide="edittable-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="confirmdeletetable-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+    <div class="relative w-xl max-w-7xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
+                <h3 class="text-xl font-semibold text-gray-900 ">
+                    Confirm Deletion
+                </h3>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4 flex flex-col">
+                <div class="border-1 rounded-2xl p-2 ">
+                    <p>Are you sure you want to delete this ?</p>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse rounded-b">
+                <button data-modal-hide="confirmdelete-modal" type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Yes</button>
+                <button data-modal-hide="confirmdelete-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add New Item Modal -->
+<div id="additem-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+    <div class="relative w-full max-w-2xl max-h-full flex justify-center">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm p-10">
+            <!-- Modal header -->
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Add New Item</h3>
+            <!-- Modal body -->
+            <form class="space-y-5">
+                <div>
+                    <label for="item-name" class="block text-sm font-medium text-gray-700">Item Name</label>
+                    <input type="text" id="item-name" name="item-name" placeholder="Item Name" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+                </div>
+                <div>
+                    <label for="item-description" class="block text-sm font-medium text-gray-700">Description</label>
+                    <textarea id="item-description" name="item-description" placeholder="Description" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required></textarea>
+                </div>
+                <div>
+                    <label for="item-price" class="block text-sm font-medium text-gray-700">Price</label>
+                    <input type="number" step="0.01" id="item-price" name="item-price" placeholder="Price" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+                </div>
+                <div>
+                    <label for="edit-item-image" class="block text-sm font-medium text-gray-700">Image</label>
+                    <input type="file" id="edit-item-image" name="edit-item-image" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" />
+                </div>
+            </form>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse ">
+                <button data-modal-hide="additem-modal" type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">Save</button>
+                <button data-modal-hide="additem-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add New Category Modal -->
+<div id="addcategory-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div class="relative w-full max-w-md max-h-full flex justify-center">
+    <div class="relative bg-white rounded-lg shadow-sm p-10">
+    <!-- Modal header -->
+    <h3 class="text-xl font-semibold text-gray-900 mb-4">Add New Category</h3>
+    <!-- Modal body -->
+    <form class="space-y-5">
+        <div>
+        <label for="category-name" class="block text-sm font-medium text-gray-700">Category Name</label>
+        <input type="text" id="category-name" name="category-name" placeholder="Category Name" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+        </div>
+    </form>
+    <!-- Modal footer -->
+    <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse ">
+        <button data-modal-hide="addcategory-modal" type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">Save</button>
+        <button data-modal-hide="addcategory-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">Close</button>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- Edit Category Modal -->
+<div id="editcategory-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div class="relative w-full max-w-md max-h-full flex justify-center">
+    <div class="relative bg-white rounded-lg shadow-sm p-10">
+    <!-- Modal header -->
+    <h3 class="text-xl font-semibold text-gray-900 mb-4">Edit Category</h3>
+    <!-- Modal body -->
+    <form class="space-y-5">
+        <div>
+            <label for="category-select-edit" class="block text-sm font-medium text-gray-700">Select Category</label>
+            <select id="category-select-edit" name="category-select-edit" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600">
+                <option selected="true" disabled="disabled" value="">Select a category</option>
+                <option value="">Pizza</option>
+                <option value="">Pasta</option>
+            </select>
+        </div>
+        <div>
+        <label for="edit-category-name" class="block text-sm font-medium text-gray-700">Enter Category Name</label>
+        <input type="text" id="edit-category-name" name="edit-category-name" placeholder="Category Name" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+        </div>
+    </form>
+    <!-- Modal footer -->
+    <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse ">
+        <button data-modal-hide="editcategory-modal" type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">Save</button>
+        <button data-modal-hide="editcategory-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">Close</button>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- Edit Item Modal -->
+<div id="edititem-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+    <div class="relative w-full max-w-2xl max-h-full flex justify-center">
+        <div class="relative bg-white rounded-lg shadow-sm p-10">
+            <!-- Modal header -->
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Edit Item</h3>
+            <!-- Modal body -->
+            <form class="space-y-5">
+                <div>
+                    <label for="edit-item-name" class="block text-sm font-medium text-gray-700">Item Name</label>
+                    <input type="text" id="edit-item-name" name="edit-item-name" placeholder="Item Name" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+                </div>
+                <div>
+                    <label for="edit-item-description" class="block text-sm font-medium text-gray-700">Description</label>
+                    <textarea id="edit-item-description" name="edit-item-description" placeholder="Description" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required></textarea>
+                </div>
+                <div>
+                    <label for="edit-item-price" class="block text-sm font-medium text-gray-700">Price</label>
+                    <input type="number" step="0.01" id="edit-item-price" name="edit-item-price" placeholder="Price" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" required />
+                </div>
+                <div>
+                    <label for="edit-item-image" class="block text-sm font-medium text-gray-700">Image</label>
+                    <input type="file" id="edit-item-image" name="edit-item-image" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" />
+                </div>
+            </form>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse ">
+                <button data-modal-hide="edititem-modal" type="button" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">Save</button>
+                <button data-modal-hide="edititem-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="confirmdeleteitem-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+    <div class="relative w-xl max-w-7xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
+                <h3 class="text-xl font-semibold text-gray-900 ">
+                    Confirm Deletion
+                </h3>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4 flex flex-col">
+                <div class="border-1 rounded-2xl p-2 ">
+                    <p>Are you sure you want to delete this ?</p>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse rounded-b">
+                <button data-modal-hide="confirmdeleteitem-modal" type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Yes</button>
+                <button data-modal-hide="confirmdeleteitem-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="confirmdeletecategory-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+    <div class="relative w-xl max-w-7xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow-sm">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
+                <h3 class="text-xl font-semibold text-gray-900 ">
+                    Confirm Deletion
+                </h3>
+            </div>
+            <!-- Modal body -->
+            <div class="p-4 md:p-5 space-y-4 flex flex-col">
+                <!-- New dropdown for selecting category to delete -->
+                <div>
+                    <label for="category-select-delete" class="block text-sm font-medium text-gray-700">Select Category</label>
+                    <select id="category-select-delete" name="category-select-delete" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600">
+                        <option selected="true" disabled="disabled" value="">Select a category</option>
+                        <option value="">Pizza</option>
+                        <option value="">Pasta</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse rounded-b">
+                <button data-modal-hide="confirmdeletecategory-modal" type="button" class="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Yes</button>
+                <button data-modal-hide="confirmdeletecategory-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">No</button>
+            </div>
+        </div>
+    </div>
+</div>

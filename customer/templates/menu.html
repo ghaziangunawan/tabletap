@@ -1,0 +1,223 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabletap - Menu</title>
+
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+</head>
+
+<body class="font-poppins min-h-screen max-w-7xl mx-auto px-2 sm:px-4">
+    <!-- Main Display -->
+    <div class="p-3 pb-40">
+        <div class="flex justify-between items-center mb-4">
+            <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#pizza" type="button" role="tab" aria-controls="profile" aria-selected="false">Pizza</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"  id="dashboard-tab" data-tabs-target="#pasta" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Pasta</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="default-tab-content" role="tabpanel">
+            <div id="pizza">
+                <div class="flex justify-between items-center mb-4">
+                    <h1 class="font-bold text-3xl">Pizza</h1>
+                </div>
+                <div id="category1" class="rounded-3xl shadow-2xl p-4 bg-white my-4 ">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full h-48 sm:h-64 object-cover brightness-90 group-hover:brightness-100 transition-all duration-300" src="https://media.istockphoto.com/id/1414575281/photo/a-delicious-and-tasty-italian-pizza-margherita-with-tomatoes-and-buffalo-mozzarella.jpg?s=612x612&w=0&k=20&c=v8mdiAa_5NaRYtIscClXe85lLzkx7loSd9_pJWt9G2o=" alt="">
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold">Margherita Pizza</h3>
+                                <p class="text-sm text-gray-600 my-1">Classic pizza with tomato, mozzarella, and basil.</p>
+                                <p class="text-lg font-semibold text-blue-600">$12.99</p>
+                                <!-- Added "Add to Order" button -->
+                                <button class="mt-2 text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-lg text-sm px-2 py-1 transition duration-300">Add to Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full h-48 sm:h-64 object-cover brightness-90 group-hover:brightness-100 transition-all duration-300" src="https://cdn11.bigcommerce.com/s-vm6doh2w4n/images/stencil/original/products/8314/20588/brenbwklcajlem2t90lo__49662.1728510295.jpg?c=1" alt="">
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold">Pepperoni Supreme</h3>
+                                <p class="text-sm text-gray-600 my-1">Spicy pepperoni with extra cheese and vegetables.</p>
+                                <p class="text-lg font-semibold text-blue-600">$14.99</p>
+                                <!-- Added "Add to Order" button -->
+                                <button class="mt-2 text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-lg text-sm px-2 py-1 transition duration-300">Add to Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full h-48 sm:h-64 object-cover brightness-90 group-hover:brightness-100 transition-all duration-300" src="https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg" alt="">
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold">Vegan Delight</h3>
+                                <p class="text-sm text-gray-600 my-1">Plant-based toppings with dairy-free cheese.</p>
+                                <p class="text-lg font-semibold text-blue-600">$13.50</p>
+                                <!-- Added "Add to Order" button -->
+                                <button class="mt-2 text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-lg text-sm px-2 py-1 transition duration-300">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    
+            <div id="pasta" role="tabpanel">
+
+                <div class="flex justify-between items-center mb-4">
+                    <h1 class="font-bold text-3xl">Pasta</h1>
+                </div>
+                <div id="category2" class="rounded-3xl shadow-2xl p-4 bg-white my-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full h-48 sm:h-64 object-cover brightness-90 group-hover:brightness-100 transition-all duration-300" src="https://www.allrecipes.com/thmb/Vg2cRidr2zcYhWGvPD8M18xM_WY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/11973-spaghetti-carbonara-ii-DDMFS-4x3-6edea51e421e4457ac0c3269f3be5157.jpg" alt="">
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold">Spaghetti Carbonara</h3>
+                                <p class="text-sm text-gray-600 my-1">Creamy pasta with pancetta, eggs, and parmesan cheese.</p>
+                                <p class="text-lg font-semibold text-blue-600">$15.99</p>
+                                <!-- Added "Add to Order" button -->
+                                <button class="mt-2 text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-lg text-sm px-2 py-1 transition duration-300">Add to Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full h-48 sm:h-64 object-cover brightness-90 group-hover:brightness-100 transition-all duration-300" src="https://assets.bonappetit.com/photos/57e2c3599f19b4610e6b79f6/1:1/w_2560%2Cc_limit/fettuccine-alfredo.jpg" alt="">
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold">Fettuccine Alfredo</h3>
+                                <p class="text-sm text-gray-600 my-1">Rich and creamy fettuccine with garlic parmesan sauce.</p>
+                                <p class="text-lg font-semibold text-blue-600">$14.50</p>
+                                <!-- Added "Add to Order" button -->
+                                <button class="mt-2 text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-lg text-sm px-2 py-1 transition duration-300">Add to Order</button>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img class="w-full h-48 sm:h-64 object-cover brightness-90 group-hover:brightness-100 transition-all duration-300" src="https://www.recipetineats.com/tachyon/2023/10/Penne-Arrabbiata-4.jpg?resize=500%2C375" alt="">
+                            <div class="p-4">
+                                <h3 class="text-lg font-bold">Penne Arrabbiata</h3>
+                                <p class="text-sm text-gray-600 my-1">Spicy tomato sauce with garlic, chili, and fresh herbs.</p>
+                                <p class="text-lg font-semibold text-blue-600">$13.50</p>
+                                <!-- Added "Add to Order" button -->
+                                <button class="mt-2 text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-lg text-sm px-2 py-1 transition duration-300">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="order-card" class="fixed bottom-5 right-2 left-4  md:max-w-xs md:w-full bg-white border border-gray-300 rounded-lg shadow-xl p-4 z-50">
+            <h2 class="text-xl font-bold mb-2">Your Order</h2>
+            <div class="flex justify-between items-center">
+                <span class="text-sm font-medium">5 items</span>
+                <span class="text-lg font-semibold text-blue-600">$73.46</span>
+            </div>
+            <button data-modal-target="order-detail-modal" data-modal-toggle="order-detail-modal" class="w-full text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 mt-3">View Order</button>
+        </div>
+    </div>
+    
+    <!-- Order Detail Modal -->
+    <div id="order-detail-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative w-full max-w-md max-h-full">
+            <div class="relative bg-white rounded-lg shadow">
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                    <h3 class="text-xl font-medium text-gray-900">
+                        Your Order Details
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="order-detail-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <div class="p-4 md:p-5">
+                    <div id="modal-order-items" class="space-y-2 max-h-60 overflow-y-auto mb-4">
+                        <!-- Order items moved to modal -->
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <div class="flex items-center">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">1×</span>
+                                <span class="text-sm">Margherita Pizza</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm font-medium mr-2">$12.99</span>
+                                <button class="text-gray-400 hover:text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <div class="flex items-center">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">2×</span>
+                                <span class="text-sm">Spaghetti Carbonara</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm font-medium mr-2">$31.98</span>
+                                <button class="text-gray-400 hover:text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <div class="flex items-center">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">1×</span>
+                                <span class="text-sm">Pepperoni Supreme</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm font-medium mr-2">$14.99</span>
+                                <button class="text-gray-400 hover:text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center border-b pb-2">
+                            <div class="flex items-center">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">1×</span>
+                                <span class="text-sm">Penne Arrabbiata</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-sm font-medium mr-2">$13.50</span>
+                                <button class="text-gray-400 hover:text-red-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Notes field -->
+                    <div class="mb-4">
+                        <label for="order-notes" class="block mb-2 text-sm font-medium text-gray-900">Special Instructions / Notes</label>
+                        <textarea id="order-notes" rows="3" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Add any special requests, allergies, or instructions for your order..."></textarea>
+                    </div>
+                    <div class="border-t pt-2 flex justify-between text-sm font-medium mb-4">
+                        <span>Subtotal:</span>
+                        <span>$73.46</span>
+                    </div>
+                    <button class="w-full text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+</html>

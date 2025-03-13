@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body class="overflow-x-hidden flex flex-col min-h-screen font-poppins bg-gray-50">
+
+    <main class="flex flex-col md:flex-row flex-grow">
+        <section class="w-full md:w-1/2 bg-gradient-to-br from-blue-500 via-purple-400 to-indigo-600 flex items-center justify-center p-10 relative overflow-hidden">
+            <div class="absolute inset-0 bg-pattern opacity-10"></div>
+            <div class="text-center relative z-10 transform transition-all duration-500 hover:scale-105">
+                <h2 class="text-white text-3xl md:text-5xl xl:text-7xl font-bold mb-6 drop-shadow-md">
+                    Welcome Back
+                </h2>
+                <p class="text-lg md:text-xl text-white/90 max-w-lg mx-auto leading-relaxed">
+                    Streamline your restaurant operations with a digital menu, unique QR codes, real-time order management and more!
+                </p>
+            </div>
+        </section>
+        
+        <section class="w-full md:w-1/2 flex items-center justify-center p-8 md:p-12 bg-white">
+            <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 md:p-10 border border-gray-100 transform transition-all duration-300 hover:shadow-2xl">
+                <h2 class="text-gray-800 text-2xl md:text-3xl font-bold text-center mb-8">Sign In</h2>
+                <form class="space-y-6">
+                    <div class="space-y-2">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email" 
+                            class="p-3 block w-full rounded-lg border-gray-300 bg-gray-50 shadow-sm 
+                            focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20 
+                            transition-all duration-200" 
+                            placeholder="your@email.com" required />
+                    </div>
+                    <div class="space-y-2">
+                        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="password" name="password" 
+                            class="p-3 block w-full rounded-lg border-gray-300 bg-gray-50 shadow-sm 
+                            focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-20
+                            transition-all duration-200" 
+                            placeholder="••••••••" required />
+                    </div>
+                    
+                    <div class="flex justify-between items-center text-sm">
+                        <div class="flex items-center">
+                            <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-blue-600 rounded">
+                            <label for="remember-me" class="ml-2 text-gray-600">Remember me</label>
+                        </div>
+                        <a href="{% url 'core:forgot_password' %}" class="text-blue-600 hover:text-blue-800 transition-colors duration-200">Forgot password?</a>
+                    </div>
+                    
+                    <div class="flex flex-col gap-y-3 pt-2">
+                        <button type="submit" 
+                            class="w-full bg-blue-600 text-white font-medium rounded-lg py-3 px-4 
+                            hover:bg-blue-700 focus:ring-4 focus:ring-blue-500 focus:ring-opacity-30 
+                            transition-all duration-200 shadow-md hover:shadow-lg">
+                            Sign In
+                        </button>
+                        <div class="relative my-2">
+                            <div class="absolute inset-0 flex items-center">
+                                <div class="w-full border-t border-gray-300"></div>
+                            </div>
+                            <div class="relative flex justify-center text-sm">
+                                <span class="px-2 bg-white text-gray-500">Or continue with</span>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="text-white flex justify-center bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center  items-center me-2 mb-2">
+                            <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 19">
+                                <path fill-rule="evenodd" d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z" clip-rule="evenodd"/>
+                            </svg>
+                            Google
+                        </button>
+                    </div>
+                    
+                    <p class="text-center text-sm text-gray-600 mt-6">
+                        Don't have an account? 
+                        <a href="{% url 'core:register' %}" class="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
+                            Sign up
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+{% endblock content %}

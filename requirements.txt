@@ -1,0 +1,11 @@
+asgiref==3.8.1
+Django==5.1.7
+django-appconf==1.1.0
+django-compressor==4.5.1
+django-environ==0.12.0
+psycopg==3.2.5
+psycopg-binary==3.2.5
+rcssmin==1.1.2
+rjsmin==1.2.2
+sqlparse==0.5.3
+typing_extensions==4.12.2

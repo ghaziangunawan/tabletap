@@ -36,9 +36,12 @@
             document.getElementById("order").classList.add("hidden")
             document.getElementById("table").classList.add("hidden")
             document.getElementById("menu").classList.add("hidden")
+            document.getElementById("menuDetail").classList.add("hidden")
             document.getElementById("dashboardHome").classList.add("hidden")
             document.getElementById("profile").classList.add("hidden")
             document.getElementById("restaurantSetting").classList.add("hidden")
+            document.getElementById("restaurantSettingDetail").classList.add("hidden")
+            
             if (pageName == "order"){
                 document.getElementById("order").classList.remove("hidden")
             }
@@ -47,17 +50,25 @@
             }
             else if (pageName =="menu"){
                 document.getElementById("menu").classList.remove("hidden")
-            }  
+            }
+            else if (pageName =="menuDetail"){
+                document.getElementById("menuDetail").classList.remove("hidden")
+            }    
             else if (pageName =="dashboardHome"){
                 document.getElementById("dashboardHome").classList.remove("hidden")
             }
             else if (pageName == "profile"){
                 document.getElementById("profile").classList.remove("hidden")
             }
-            else{
+            else if (pageName == "restaurantSetting"){
                 document.getElementById("restaurantSetting").classList.remove("hidden")
             }
+            else if (pageName == "restaurantSettingDetail"){
+                document.getElementById("restaurantSettingDetail").classList.remove("hidden")
+            }
         }
+        
+        
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>

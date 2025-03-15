@@ -373,14 +373,23 @@
     </div>
 </div>
 
-<div id="menu" class="hidden max-w-7xl mx-auto">
+<div id="menuDetail" class="hidden max-w-7xl mx-auto">
     <div class="p-3 pb-40">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
-            <h1 class="font-bold text-3xl">Menu Management</h1>
-            <button data-modal-target="addcategory-modal" data-modal-toggle="addcategory-modal" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2
-                transition-all duration-300 transform hover:scale-105">
-                + Add New Category
-            </button>
+        <div class="flex flex-wrap bg-white rounded-lg shadow-md p-3 justify-center w-full sm:w-auto gap-2">
+            <a onclick="handleSideBarClick('menu')" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100">
+                <span class="whitespace-nowrap">Back</span>
+            </a>
+            <div class="flex flex-wrap gap-2">
+                <button data-modal-target="addcategory-modal" data-modal-toggle="addcategory-modal" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-xs sm:text-sm px-2 py-1 transition-all duration-300 transform hover:scale-105">
+                    Add Category
+                </button>
+                <button data-modal-target="editcategory-modal" data-modal-toggle="editcategory-modal" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs sm:text-sm px-2 py-1 transition-all duration-300 transform hover:scale-105">
+                    Edit Category
+                </button>
+                <button data-modal-target="confirmdeletecategory-modal" data-modal-toggle="confirmdeletecategory-modal" class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-xs sm:text-sm px-2 py-1 transition-all duration-300 transform hover:scale-105">
+                    Delete Category
+                </button>
+            </div>
         </div>
         <div class="mb-4 border-b border-gray-200">
             <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
@@ -396,16 +405,6 @@
             <div id="pizza">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
                     <h1 class="font-bold text-3xl">Pizza</h1>
-                    <div class="flex gap-2">
-                        <button data-modal-target="editcategory-modal" data-modal-toggle="editcategory-modal" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2
-                            transition-all duration-300 transform hover:scale-105">
-                            Edit Category
-                        </button>
-                        <button data-modal-target="confirmdeletecategory-modal" data-modal-toggle="confirmdeletecategory-modal"  class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2
-                            transition-all duration-300 transform hover:scale-105">
-                            Delete Category
-                        </button>
-                    </div>
                 </div>
                 <button data-modal-target="additem-modal" data-modal-toggle="additem-modal" class="mb-4 text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-xs sm:text-sm px-2 sm:px-3 py-1 sm:py-2
                     transition-all duration-300 transform hover:scale-105">
@@ -594,6 +593,70 @@
     </div>
 </div>
 
+<!-- Menu Management Section -->
+<div id="menu" class="hidden max-w-7xl mx-auto">
+    <h1 class="font-bold text-3xl mb-6">Menu Management</h1>
+    <button data-modal-target="addmenu-modal" data-modal-toggle="addmenu-modal" class="text-white bg-green-600 hover:bg-green-700 font-medium rounded-lg text-sm px-3 py-2 mb-6 transition-all duration-300 transform hover:scale-105">
+        + Add New Menu
+    </button>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300">
+            <div class="bg-gradient-to-r from-blue-500 to-blue-700 h-24 flex items-center justify-center">
+                <h2 class="text-2xl font-bold text-white">Italian Menu</h2>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-600 mb-4">Our authentic Italian dishes featuring handcrafted pizzas and pastas.</p>
+                <div class="flex flex-col space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Categories:</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">2</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Items:</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">6</span>
+                    </div>
+                </div>
+                <div class="flex mt-6 gap-2">
+                    <button onclick="handleSideBarClick('menuDetail')" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 flex-1 transition-all duration-300 transform hover:scale-105">
+                        View & Edit
+                    </button>
+                    <button data-modal-target="confirmdeletemenu-modal" data-modal-toggle="confirmdeletemenu-modal" class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-sm px-4 py-2 transition-all duration-300 transform hover:scale-105">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300">
+            <div class="bg-gradient-to-r from-blue-500 to-blue-700 h-24 flex items-center justify-center">
+                <h2 class="text-2xl font-bold text-white">Asian Fusion Menu</h2>
+            </div>
+            <div class="p-6">
+                <p class="text-gray-600 mb-4">A blend of traditional Asian flavors with modern cooking techniques.</p>
+                <div class="flex flex-col space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Categories:</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">3</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium">Items:</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">9</span>
+                    </div>
+                </div>
+                <div class="flex mt-6 gap-2">
+                    <button onclick="handleSideBarClick('menuDetail')" class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2 flex-1 transition-all duration-300 transform hover:scale-105">
+                        View & Edit
+                    </button>
+                    <button data-modal-target="confirmdeletemenu-modal" data-modal-toggle="confirmdeletemenu-modal" class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-sm px-4 py-2 transition-all duration-300 transform hover:scale-105">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div id="profile" class="hidden max-w-7xl mx-auto">
     <h1 class="font-bold text-3xl">Account Settings</h1>
     <div class="mt-6 space-y-6">
@@ -626,6 +689,83 @@
 </div>
 
 <div id="restaurantSetting" class="hidden max-w-7xl mx-auto">
+    <h1 class="font-bold text-3xl text-black">Your Restaurants</h1>
+    <p class="text-gray-600 mb-8">Select a restaurant to manage its settings</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-100 transition-all duration-300 flex flex-col">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 h-32 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-blue-700 opacity-20 pattern-dots pattern-blue-500 pattern-bg-white pattern-size-4 pattern-opacity-20"></div>
+                <h2 class="text-2xl font-bold text-white drop-shadow-lg relative">Italian Delights</h2>
+            </div>
+            <div class="flex flex-col justify-center p-6 gap-y-3">
+                <div class="bg-blue-50 px-4 py-3 rounded-lg mb-2">
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-gray-800 font-medium">Tables</span>
+                        <span class="text-blue-700 font-semibold">12</span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center text-sm">
+                        <span class="text-gray-800 font-medium">Menu Items</span>
+                        <span class="text-blue-700 font-semibold">24</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <button onclick="handleSideBarClick('restaurantSettingDetail')" class="w-full py-2.5 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-md">
+                        Manage Restaurant
+                    </button>
+                    <button data-modal-target="invite-modal" data-modal-toggle="invite-modal" class="w-full py-2.5 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-md">
+                        Invite Staff
+                    </button>
+                    <button data-modal-target="confirmdelete-modal" data-modal-toggle="confirmdelete-modal" class="w-full py-2.5 bg-white border border-red-600 text-red-600 hover:bg-red-50 font-medium rounded-lg text-sm transition-all duration-300">
+                        Delete Restaurant
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Restaurant Card 2 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-blue-100 transition-all duration-300 flex flex-col">
+            <div class="bg-gradient-to-r from-blue-600 to-blue-800 h-32 flex items-center justify-center relative overflow-hidden">
+                <div class="absolute inset-0 bg-blue-700 opacity-20 pattern-dots pattern-blue-500 pattern-bg-white pattern-size-4 pattern-opacity-20"></div>
+                <h2 class="text-2xl font-bold text-white drop-shadow-lg relative">Sushi Express</h2>
+            </div>
+            <div class="flex flex-col justify-center p-6 gap-y-3">
+                <div class="bg-blue-50 px-4 py-3 rounded-lg mb-2">
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-gray-800 font-medium">Tables</span>
+                        <span class="text-blue-700 font-semibold">8</span>
+                    </div>
+                    <div class="mt-2 flex justify-between items-center text-sm">
+                        <span class="text-gray-800 font-medium">Menu Items</span>
+                        <span class="text-blue-700 font-semibold">18</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <button onclick="handleSideBarClick('restaurantSettingDetail')" class="w-full py-2.5 bg-blue-700 hover:bg-blue-800 text-white font-medium rounded-lg text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-md">
+                        Manage Restaurant
+                    </button>
+                    <button data-modal-target="invite-modal" data-modal-toggle="invite-modal" class="w-full py-2.5 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg text-sm transition-all duration-300 transform hover:scale-105 hover:shadow-md">
+                        Invite Staff
+                    </button>
+                    <button data-modal-target="confirmdelete-modal" data-modal-toggle="confirmdelete-modal" class="w-full py-2.5 bg-white border border-red-600 text-red-600 hover:bg-red-50 font-medium rounded-lg text-sm transition-all duration-300">
+                        Delete Restaurant
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add New Restaurant Card -->
+        <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl shadow-md border border-dashed border-blue-200 hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col items-center justify-center p-8">
+            <h3 class="text-xl font-medium text-blue-800 mb-2">Add New Restaurant</h3>
+            <p class="text-gray-600 text-sm text-center mb-6 max-w-xs">Create a new restaurant or join an existing one to start managing your business</p>
+            <button data-modal-target="addrestaurant-modal" data-modal-toggle="addrestaurant-modal" class="px-6 py-2.5 bg-blue-600 text-white hover:bg-blue-700 font-medium rounded-lg text-sm transition-all duration-300 hover:shadow-md">
+                Get Started
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="restaurantSettingDetail" class="hidden max-w-7xl mx-auto">
     <h1 class="font-bold text-3xl mt-3">Restaurant Management</h1>
     <div class="mt-6 space-y-6">
         <form class="max-w-4xl">
@@ -655,14 +795,7 @@
                     <div class="md:w-1/2">
                         <label class="block mb-2 text-sm font-medium text-gray-900" for="restaurant-photo">Upload New Photo</label>
                         <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" id="restaurant-photo" type="file" accept="image/*">
-                        <p class="mt-1 text-sm text-gray-500">PNG, JPG or JPEG (MAX. 5MB)</p>
-                        <div class="mt-4 bg-gray-50 p-4 rounded-lg border border-gray-200">
-                            <h4 class="text-sm font-medium text-gray-900">Photo Guidelines:</h4>
-                            <ul class="mt-2 text-xs text-gray-500 list-disc list-inside">
-                                <li>Well-lit, clear image of your restaurant</li>
-                                <li>Preferably showing your restaurant's exterior or main dining area</li>
-                            </ul>
-                        </div>
+                        <p class="mt-1 text-sm text-gray-500">PNG, JPG or JPEG</p>
                     </div>
                 </div>
             </div>
@@ -670,5 +803,139 @@
                 Update Restaurant Information
             </button>
         </form>
+        
+        <!-- Employee Management Section -->
+        <div class="mt-12 border-t border-gray-200 pt-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-lg font-medium text-gray-900">Staff Management</h3>
+                <button data-modal-target="invite-modal" data-modal-toggle="invite-modal" class="text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-all duration-300 transform hover:scale-105">
+                    + Invite Staff
+                </button>
+            </div>
+            
+            <!-- Pending Invitations -->
+            <div class="mb-6">
+                <h4 class="text-md font-medium text-gray-700 mb-3">Pending Invitations</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-white uppercase bg-gradient-to-r from-blue-500 to-blue-700 border-b">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">Email</th>
+                                    <th scope="col" class="px-6 py-3">Name</th>
+                                    <th scope="col" class="px-6 py-3">Invited On</th>
+                                    <th scope="col" class="px-6 py-3">Invited By</th>
+                                    <th scope="col" class="px-6 py-3">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b border-gray-200 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    <td class="px-6 py-4">adwokacik@example.com</td>
+                                    <td class="px-6 py-4">Adwo Kacik</td>
+                                    <td class="px-6 py-4">2025-01-01 12:30</td>
+                                    <td class="px-6 py-4">John Doe</td>
+                                    <td class="px-3 py-4">
+                                        <div class="flex flex-col sm:flex-row gap-2">
+                                            <button data-modal-target="edittable-modal" data-modal-toggle="edittable-modal"  class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs sm:text-sm px-2 py-1 
+                                                transition-all duration-300 transform hover:scale-105">Re-send</button>
+                                            <button data-modal-target="confirmdeletetable-modal" data-modal-toggle="confirmdeletetable-modal" class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-xs sm:text-sm px-2 py-1
+                                                transition-all duration-300 transform hover:scale-105">Cancel</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    <td class="px-6 py-4">ghazian@example.com</td>
+                                    <td class="px-6 py-4">Ghazian</td>
+                                    <td class="px-6 py-4">2025-01-01 12:30</td>
+                                    <td class="px-6 py-4">Alice Johnson</td>
+                                    <td class="px-3 py-4">
+                                        <div class="flex flex-col sm:flex-row gap-2">
+                                            <button data-modal-target="edittable-modal" data-modal-toggle="edittable-modal"  class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs sm:text-sm px-2 py-1 
+                                                transition-all duration-300 transform hover:scale-105">Re-send</button>
+                                            <button data-modal-target="confirmdeletetable-modal" data-modal-toggle="confirmdeletetable-modal" class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-xs sm:text-sm px-2 py-1
+                                                transition-all duration-300 transform hover:scale-105">Cancel</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    <td class="px-6 py-4">gunawan@example.com</td>
+                                    <td class="px-6 py-4">Gunawan</td>
+                                    <td class="px-6 py-4">2025-01-01 12:30</td>
+                                    <td class="px-6 py-4">John Doe</td>
+                                    <td class="px-3 py-4">
+                                        <div class="flex flex-col sm:flex-row gap-2">
+                                            <button data-modal-target="edittable-modal" data-modal-toggle="edittable-modal"  class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-xs sm:text-sm px-2 py-1 
+                                                transition-all duration-300 transform hover:scale-105">Re-send</button>
+                                            <button data-modal-target="confirmdeletetable-modal" data-modal-toggle="confirmdeletetable-modal" class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-xs sm:text-sm px-2 py-1
+                                                transition-all duration-300 transform hover:scale-105">Cancel</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Active Staff List -->
+            <div>
+                <h4 class="text-md font-medium text-gray-700 mb-3">Current Staff</h4>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-500">
+                            <thead class="text-xs text-white uppercase bg-gradient-to-r from-green-500 to-green-700 border-b">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3">Email</th>
+                                    <th scope="col" class="px-6 py-3">Name</th>
+                                    <th scope="col" class="px-6 py-3">Invited On</th>
+                                    <th scope="col" class="px-6 py-3">Invited By</th>
+                                    <th scope="col" class="px-6 py-3">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-white border-b border-gray-200 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    <td class="px-6 py-4">JohnDoe@example.com</td>
+                                    <td class="px-6 py-4">John Doe</td>
+                                    <td class="px-6 py-4">2025-01-01 12:30</td>
+                                    <td class="px-6 py-4">Restaurant Creator</td>
+                                    <td class="px-3 py-4">
+                                        <div class="flex flex-col sm:flex-row gap-2">
+                                            <button data-modal-target="confirmdeletetable-modal" data-modal-toggle="confirmdeletetable-modal" class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-xs sm:text-sm px-2 py-1
+                                            transition-all duration-300 transform hover:scale-105">Kick
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    <td class="px-6 py-4">Robert@example.com</td>
+                                    <td class="px-6 py-4">Robert</td>
+                                    <td class="px-6 py-4">2025-01-01 12:30</td>
+                                    <td class="px-6 py-4">John Doe</td>
+                                    <td class="px-3 py-4">
+                                        <div class="flex flex-col sm:flex-row gap-2">
+                                            <button data-modal-target="confirmdeletetable-modal" data-modal-toggle="confirmdeletetable-modal" class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-xs sm:text-sm px-2 py-1
+                                                transition-all duration-300 transform hover:scale-105">Kick
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-white border-b border-gray-200 transition duration-300 ease-in-out hover:bg-gray-100">
+                                    <td class="px-6 py-4">Alice@example.com</td>
+                                    <td class="px-6 py-4">Alice</td>
+                                    <td class="px-6 py-4">2025-01-01 12:30</td>
+                                    <td class="px-6 py-4">John Doe</td>
+                                    <td class="px-3 py-4">
+                                        <div class="flex flex-col sm:flex-row gap-2">
+                                            <button data-modal-target="confirmdeletetable-modal" data-modal-toggle="confirmdeletetable-modal" class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-xs sm:text-sm px-2 py-1
+                                                transition-all duration-300 transform hover:scale-105">Kick
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

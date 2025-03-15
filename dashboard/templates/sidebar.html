@@ -7,9 +7,72 @@
 
 <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-        <a href="#" class="flex items-center ps-2.5 mb-5">
-            <span class="self-center text-3xl font-semibold bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent">tabletap.</span>
-        </a>
+        <div class="flex items-center ps-2.5 mb-5">
+            <a onclick="handleSideBarClick('dashboardHome')">
+                <span class="self-center text-3xl font-semibold bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 bg-clip-text text-transparent">tabletap.</span>
+            </a>
+
+            <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification" class="relative inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400 ml-auto transition-all duration-300 hover:scale-110" type="button">
+                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
+                <path d="M12.133 10.632v-1.8A5.406 5.406 0 0 0 7.979 3.57.946.946 0 0 0 8 3.464V1.1a1 1 0 0 0-2 0v2.364a.946.946 0 0 0 .021.106 5.406 5.406 0 0 0-4.154 5.262v1.8C1.867 13.018 0 13.614 0 14.807 0 15.4 0 16 .538 16h12.924C14 16 14 15.4 14 14.807c0-1.193-1.867-1.789-1.867-4.175ZM3.823 17a3.453 3.453 0 0 0 6.354 0H3.823Z"/>
+                </svg>
+                
+                <div class="absolute block w-3 h-3 bg-red-500 border-2 border-white rounded-full -top-0.5 start-2.5 dark:border-gray-900 animate-pulse"></div>
+            </button>
+                
+            <div id="dropdownNotification" class="z-20 hidden w-80 max-w-sm bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-800 dark:divide-gray-700" aria-labelledby="dropdownNotificationButton">
+                <div class="block px-4 py-2 font-medium text-center text-gray-700 rounded-t-lg bg-gray-50 dark:bg-gray-700 dark:text-white">
+                    <div class="flex items-center justify-between">
+                        <span>Restaurant Invitations</span>
+                        <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">2</span>
+                    </div>
+                </div>
+                <div class="divide-y divide-gray-100 dark:divide-gray-600 max-h-60 overflow-y-auto">
+                    <div class="flex flex-col px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="text-black dark:text-white font-medium">Indo Restaurant</p>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Just now</span>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">You've been invited to join this restaurant</p>
+                        <div class="w-full flex justify-end space-x-2">
+                            <button class="bg-green-500 hover:bg-green-600 rounded-md px-3 py-1 text-white text-sm font-medium transition-colors duration-200 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 17.837 17.837" fill="currentColor">
+                                    <path d="M16.145,2.571c-0.272-0.273-0.718-0.273-0.99,0L6.92,10.804l-4.241-4.27c-0.272-0.274-0.715-0.274-0.989,0L0.204,8.019c-0.272,0.271-0.272,0.717,0,0.99l6.217,6.258c0.272,0.271,0.715,0.271,0.99,0L17.63,5.047c0.276-0.273,0.276-0.72,0-0.994L16.145,2.571z"/>
+                                </svg>
+                                Accept
+                            </button>
+                            <button class="bg-red-500 hover:bg-red-600 rounded-md px-3 py-1 text-white text-sm font-medium transition-colors duration-200 flex items-center">
+                                <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M342.271,255.38L501.124,96.525c7.032-7.026,10.888-16.367,10.876-26.298c-0.012-9.91-3.892-19.241-10.912-26.261l-33.682-33.059c-7.008-7.008-16.331-10.271-26.249-10.271c-0.024,0-0.049,0-0.073,0c-9.93,0-19.241,3.227-26.237,10.228L255.994,169.408L97.14,11.033C90.132,4.019,80.809,0.636,70.903,0.636c-0.024,0-0.036,0-0.061,0c-9.918,0-19.241,3.257-26.262,10.283L10.9,44.284C3.892,51.286,0.024,60.451,0,70.368c-0.012,9.954,3.831,19.217,10.851,26.231l158.866,158.82L10.839,414.259c-14.452,14.482-14.428,38.042,0.061,52.536l33.681,33.683c7.263,7.263,16.792,10.891,26.322,10.885c9.505,0,19.011-3.615,26.237-10.847l158.854-158.859l158.854,158.866c14.489,14.47,38.07,14.446,52.559-0.048l33.682-33.682c7.008-7.008,10.876-16.327,10.888-26.251c0.024-9.954-3.831-19.301-10.851-26.308L342.271,255.38z M483.532,449.231l-33.682,33.686c-4.801,4.808-12.646,4.844-17.447,0.044L264.772,315.323c-2.328-2.328-5.48-3.639-8.778-3.639s-6.45,1.311-8.778,3.639L79.584,482.961c-2.316,2.308-5.783,3.983-8.705,3.575c-3.31-0.006-6.414-1.292-8.742-3.619l-33.682-33.686c-4.813-4.821-4.838-12.647-0.048-17.442l167.644-167.631c2.328-2.328,3.637-5.486,3.637-8.777c0-3.293-1.31-6.45-3.637-8.778L28.407,78.963c-2.316-2.308-3.577-5.4-3.577-8.698c0.012-3.31,1.297-6.414,3.625-8.742L62.137,27.84c2.352-2.351,5.214-4.121,8.766-3.642c3.274,0,6.353,1.279,8.681,3.6L247.216,195.43c4.85,4.85,12.706,4.85,17.556,0L432.404,28.421c2.303-2.31,5.383-2.954,8.681-2.954c0,0,0.012,0,0.024,0c3.31,0,6.414,0.668,8.742,2.996l33.682,33.371c2.34,2.34,3.637,5.288,3.637,8.586c0,3.286-1.273,6.294-3.601,8.622L315.937,246.64c-4.85,4.85-4.85,12.687,0,17.536l167.631,167.629c2.316,2.31,3.589,5.397,3.577,8.694C487.145,443.804,485.86,446.903,483.532,449.231z"/>
+                                </svg>
+                                Decline
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="text-black dark:text-white font-medium">McDonald</p>
+                            <span class="text-xs text-gray-500 dark:text-gray-400">2 hours ago</span>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">You've been invited as restaurant staff</p>
+                        <div class="w-full flex justify-end space-x-2">
+                            <button class="bg-green-500 hover:bg-green-600 rounded-md px-3 py-1 text-white text-sm font-medium transition-colors duration-200 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1" viewBox="0 0 17.837 17.837" fill="currentColor">
+                                    <path d="M16.145,2.571c-0.272-0.273-0.718-0.273-0.99,0L6.92,10.804l-4.241-4.27c-0.272-0.274-0.715-0.274-0.989,0L0.204,8.019c-0.272,0.271-0.272,0.717,0,0.99l6.217,6.258c0.272,0.271,0.715,0.271,0.99,0L17.63,5.047c0.276-0.273,0.276-0.72,0-0.994L16.145,2.571z"/>
+                                </svg>
+                                Accept
+                            </button>
+                            <button class="bg-red-500 hover:bg-red-600 rounded-md px-3 py-1 text-white text-sm font-medium transition-colors duration-200 flex items-center">
+                                <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+                                    <path d="M342.271,255.38L501.124,96.525c7.032-7.026,10.888-16.367,10.876-26.298c-0.012-9.91-3.892-19.241-10.912-26.261l-33.682-33.059c-7.008-7.008-16.331-10.271-26.249-10.271c-0.024,0-0.049,0-0.073,0c-9.93,0-19.241,3.227-26.237,10.228L255.994,169.408L97.14,11.033C90.132,4.019,80.809,0.636,70.903,0.636c-0.024,0-0.036,0-0.061,0c-9.918,0-19.241,3.257-26.262,10.283L10.9,44.284C3.892,51.286,0.024,60.451,0,70.368c-0.012,9.954,3.831,19.217,10.851,26.231l158.866,158.82L10.839,414.259c-14.452,14.482-14.428,38.042,0.061,52.536l33.681,33.683c7.263,7.263,16.792,10.891,26.322,10.885c9.505,0,19.011-3.615,26.237-10.847l158.854-158.859l158.854,158.866c14.489,14.47,38.07,14.446,52.559-0.048l33.682-33.682c7.008-7.008,10.876-16.327,10.888-26.251c0.024-9.954-3.831-19.301-10.851-26.308L342.271,255.38z M483.532,449.231l-33.682,33.686c-4.801,4.808-12.646,4.844-17.447,0.044L264.772,315.323c-2.328-2.328-5.48-3.639-8.778-3.639s-6.45,1.311-8.778,3.639L79.584,482.961c-2.316,2.308-5.783,3.983-8.705,3.575c-3.31-0.006-6.414-1.292-8.742-3.619l-33.682-33.686c-4.813-4.821-4.838-12.647-0.048-17.442l167.644-167.631c2.328-2.328,3.637-5.486,3.637-8.777c0-3.293-1.31-6.45-3.637-8.778L28.407,78.963c-2.316-2.308-3.577-5.4-3.577-8.698c0.012-3.31,1.297-6.414,3.625-8.742L62.137,27.84c2.352-2.351,5.214-4.121,8.766-3.642c3.274,0,6.353,1.279,8.681,3.6L247.216,195.43c4.85,4.85,12.706,4.85,17.556,0L432.404,28.421c2.303-2.31,5.383-2.954,8.681-2.954c0,0,0.012,0,0.024,0c3.31,0,6.414,0.668,8.742,2.996l33.682,33.371c2.34,2.34,3.637,5.288,3.637,8.586c0,3.286-1.273,6.294-3.601,8.622L315.937,246.64c-4.85,4.85-4.85,12.687,0,17.536l167.631,167.629c2.316,2.31,3.589,5.397,3.577,8.694C487.145,443.804,485.86,446.903,483.532,449.231z"/>
+                                </svg>
+                                Decline
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <ul class="space-y-2 font-medium">
             <li>
                 <a onclick="handleSideBarClick('order')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -24,7 +87,7 @@
             </li>
             <li>
                 <a onclick="handleSideBarClick('menu')" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <span class="flex-1 ms-3 whitespace-nowrap">Menu</span>
+                <span class="flex-1 ms-3 whitespace-nowrap">Menus</span>
                 </a>
             </li>
             <li>
@@ -55,7 +118,28 @@
                 <span class="flex-1 ms-3 whitespace-nowrap text-red-500">Logout</span>
                 </a>
             </li>
-            
+        </ul>
+        <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+            <li>
+                <button id="dropdownBottomButton" data-dropdown-toggle="dropdownBottom" data-dropdown-placement="bottom" 
+                class="ml-3 mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center " type="button">Change Restaurant 
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                </svg>
+                </button>
+
+                <!-- Dropdown menu -->
+                <div id="dropdownBottom" class="z-10 hidden bg-white dark:bg-gray-700 divide-y divide-gray-100 rounded-lg shadow-sm w-auto">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownBottomButton">
+                        <li>
+                            <a class="block px-4 py-2 text-black hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-white">Italian Delights</a>
+                        </li>
+                        <li>
+                            <a class="block px-4 py-2 text-black hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-white"> Sushi Express</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </div>
 </aside>

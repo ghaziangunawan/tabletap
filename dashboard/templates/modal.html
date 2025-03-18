@@ -1,10 +1,10 @@
-<div id="showorder-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="showorder-modal" role="dialog" aria-modal="true" aria-labelledby="showorder-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-xl max-w-7xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 ">
+                <h3 id="showorder-modal-title" class="text-xl font-semibold text-gray-900 ">
                     Order details
                 </h3>
             </div>
@@ -28,13 +28,13 @@
 </div>
 
 
-<div id="confirmdelete-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="confirmdelete-modal" role="dialog" aria-modal="true" aria-labelledby="confirmdelete-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-xl max-w-7xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 ">
+                <h3 id="confirmdelete-modal-title" class="text-xl font-semibold text-gray-900 ">
                     Confirm Deletion
                 </h3>
             </div>
@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<div id="addtable-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-xl p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="addtable-modal" role="dialog" aria-modal="true" aria-labelledby="addtable-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-xl p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-7xl max-h-full flex justify-center">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm p-10">
@@ -79,7 +79,7 @@
     </div>
 </div>
 
-<div id="edittable-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-xl p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="edittable-modal" role="dialog" aria-modal="true" aria-labelledby="edittable-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-xl p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-7xl max-h-full flex justify-center">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm p-10">
@@ -106,13 +106,13 @@
 </div>
 
 
-<div id="confirmdeletetable-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="confirmdeletetable-modal" role="dialog" aria-modal="true" aria-labelledby="confirmdeletetable-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-xl max-w-7xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 ">
+                <h3 id="confirmdeletetable-modal-title" class="text-xl font-semibold text-gray-900 ">
                     Confirm Deletion
                 </h3>
             </div>
@@ -132,12 +132,12 @@
 </div>
 
 <!-- Add New Item Modal -->
-<div id="additem-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="additem-modal" role="dialog" aria-modal="true" aria-labelledby="additem-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-2xl max-h-full flex justify-center">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm p-10">
             <!-- Modal header -->
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Add New Item</h3>
+            <h3 id="additem-modal-title" class="text-xl font-semibold text-gray-900 mb-4">Add New Item</h3>
             <!-- Modal body -->
             <form class="space-y-5">
                 <div>
@@ -156,6 +156,11 @@
                     <label for="edit-item-image" class="block text-sm font-medium text-gray-700">Image</label>
                     <input type="file" id="edit-item-image" name="edit-item-image" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" />
                 </div>
+                <!-- Added alt text field -->
+                <div>
+                    <label for="item-alt-text" class="block text-sm font-medium text-gray-700">Image Alt Text</label>
+                    <input type="text" id="item-alt-text" name="item-alt-text" placeholder="Describe the image (alt text)" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" />
+                </div>
             </form>
             <!-- Modal footer -->
             <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse ">
@@ -166,11 +171,11 @@
     </div>
 </div>
 
-<div id="addcategory-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="addcategory-modal" role="dialog" aria-modal="true" aria-labelledby="addcategory-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-md max-h-full flex justify-center">
         <div class="relative bg-white rounded-lg shadow-sm p-10">
         <!-- Modal header -->
-        <h3 class="text-xl font-semibold text-gray-900 mb-4">Add New Category</h3>
+        <h3 id="addcategory-modal-title" class="text-xl font-semibold text-gray-900 mb-4">Add New Category</h3>
         <!-- Modal body -->
         <form class="space-y-5">
             <div>
@@ -187,11 +192,11 @@
     </div>
 </div>
 
-<div id="editcategory-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="editcategory-modal" role="dialog" aria-modal="true" aria-labelledby="editcategory-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-md max-h-full flex justify-center">
         <div class="relative bg-white rounded-lg shadow-sm p-10">
         <!-- Modal header -->
-        <h3 class="text-xl font-semibold text-gray-900 mb-4">Edit Category</h3>
+        <h3 id="editcategory-modal-title" class="text-xl font-semibold text-gray-900 mb-4">Edit Category</h3>
         <!-- Modal body -->
         <form class="space-y-5">
             <div>
@@ -216,11 +221,11 @@
     </div>
 </div>
 
-<div id="edititem-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="edititem-modal" role="dialog" aria-modal="true" aria-labelledby="edititem-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-2xl max-h-full flex justify-center">
         <div class="relative bg-white rounded-lg shadow-sm p-10">
             <!-- Modal header -->
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Edit Item</h3>
+            <h3 id="edititem-modal-title" class="text-xl font-semibold text-gray-900 mb-4">Edit Item</h3>
             <!-- Modal body -->
             <form class="space-y-5">
                 <div>
@@ -239,6 +244,11 @@
                     <label for="edit-item-image" class="block text-sm font-medium text-gray-700">Image</label>
                     <input type="file" id="edit-item-image" name="edit-item-image" accept="image/*" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none" />
                 </div>
+                <!-- Added alt text field -->
+                <div>
+                    <label for="edit-item-alt-text" class="block text-sm font-medium text-gray-700">Image Alt Text</label>
+                    <input type="text" id="edit-item-alt-text" name="edit-item-alt-text" placeholder="Describe the image (alt text)" class="p-2 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-600 focus:ring-blue-600" />
+                </div>
             </form>
             <!-- Modal footer -->
             <div class="flex items-center p-4 md:p-5 space-x-3 rtl:space-x-reverse ">
@@ -250,13 +260,13 @@
 </div>
 
 
-<div id="confirmdeleteitem-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="confirmdeleteitem-modal" role="dialog" aria-modal="true" aria-labelledby="confirmdeleteitem-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-xl max-w-7xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 ">
+                <h3 id="confirmdeleteitem-modal-title" class="text-xl font-semibold text-gray-900 ">
                     Confirm Deletion
                 </h3>
             </div>
@@ -275,13 +285,13 @@
     </div>
 </div>
 
-<div id="confirmdeletecategory-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="confirmdeletecategory-modal" role="dialog" aria-modal="true" aria-labelledby="confirmdeletecategory-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-xl max-w-7xl max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t  border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900 ">
+                <h3 id="confirmdeletecategory-modal-title" class="text-xl font-semibold text-gray-900 ">
                     Confirm Deletion
                 </h3>
             </div>
@@ -307,11 +317,11 @@
 </div>
 
 
-<div id="addmenu-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="addmenu-modal" role="dialog" aria-modal="true" aria-labelledby="addmenu-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-md max-h-full flex justify-center">
         <div class="relative bg-white rounded-lg shadow-sm p-10">
             <!-- Modal header -->
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Add New Menu</h3>
+            <h3 id="addmenu-modal-title" class="text-xl font-semibold text-gray-900 mb-4">Add New Menu</h3>
             <!-- Modal body -->
             <form class="space-y-5">
                 <div>
@@ -333,13 +343,13 @@
 </div>
 
 <!-- Confirm Delete Menu Modal -->
-<div id="confirmdeletemenu-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="confirmdeletemenu-modal" role="dialog" aria-modal="true" aria-labelledby="confirmdeletemenu-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-xl max-w-md max-h-full">
         <!-- Modal content -->
         <div class="relative bg-white rounded-lg shadow-sm">
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900">
+                <h3 id="confirmdeletemenu-modal-title" class="text-xl font-semibold text-gray-900">
                     Delete Menu?
                 </h3>
             </div>
@@ -357,12 +367,12 @@
 </div>
 
 <!-- Invite Staff Modal -->
-<div id="invite-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="invite-modal" role="dialog" aria-modal="true" aria-labelledby="invite-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-md max-h-full flex justify-center">
         <div class="relative bg-white rounded-lg shadow-lg p-6 sm:p-8">
             <!-- Modal header -->
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900">
+                <h3 id="invite-modal-title" class="text-xl font-semibold text-gray-900">
                     Invite Staff Member
                 </h3>
                 <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center" data-modal-hide="invite-modal">
@@ -396,11 +406,11 @@
 </div>
 
 <!-- Edit Staff Modal -->
-<div id="edit-staff-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="edit-staff-modal" role="dialog" aria-modal="true" aria-labelledby="edit-staff-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-md max-h-full flex justify-center">
         <div class="relative bg-white rounded-lg shadow-lg p-6 sm:p-8">
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900">
+                <h3 id="edit-staff-modal-title" class="text-xl font-semibold text-gray-900">
                     Edit Staff Role
                 </h3>
                 <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center" data-modal-hide="edit-staff-modal">
@@ -446,11 +456,11 @@
 </div>
 
 <!-- Remove Staff Modal -->
-<div id="remove-staff-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="remove-staff-modal" role="dialog" aria-modal="true" aria-labelledby="remove-staff-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-md max-h-full flex justify-center">
         <div class="relative bg-white rounded-lg shadow-lg p-6 sm:p-8">
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900">
+                <h3 id="remove-staff-modal-title" class="text-xl font-semibold text-gray-900">
                     Remove Staff Member
                 </h3>
                 <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center" data-modal-hide="remove-staff-modal">
@@ -486,12 +496,12 @@
 </div>
 
 <!-- Add Restaurant Modal -->
-<div id="addrestaurant-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
+<div id="addrestaurant-modal" role="dialog" aria-modal="true" aria-labelledby="addrestaurant-modal-title" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full mx-auto">
     <div class="relative w-full max-w-lg max-h-full flex justify-center">
         <div class="relative bg-white rounded-lg shadow-lg p-6 sm:p-8">
             <!-- Modal header -->
             <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-200">
-                <h3 class="text-xl font-semibold text-gray-900">
+                <h3 id="addrestaurant-modal-title" class="text-xl font-semibold text-gray-900">
                     Add New Restaurant
                 </h3>
                 <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center" data-modal-hide="addrestaurant-modal">

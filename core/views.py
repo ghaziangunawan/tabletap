@@ -1,12 +1,10 @@
 from django.shortcuts import render, redirect
 from .forms import sign_up_form, login_form
-from django.contrib.auth import login
+from django.contrib.auth import login,logout
 
 # Create your views here.
 
 def index(request):
-    if request.user.is_authenticated:
-        return redirect("dashboard:dashboard")
     return render(request, 'landing.html')
 
 def render_login(request):
@@ -17,14 +15,14 @@ def render_login(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
+            print(form.cleaned_data["remember_me"])
+            if not form.cleaned_data["remember_me"]:
+                request.session.set_expiry(0)
             return redirect("dashboard:dashboard")
         else:
             error = "email/password is not found"
         return render(request, 'login.html', {"form": login_form(), "error": error})
     return render(request,'login.html',{"form":login_form()})
-
-def render_get_started(request):
-    return render(request,'get_started.html')
 
 def render_register(request):
     if request.user.is_authenticated:
@@ -51,3 +49,10 @@ def render_privacy_policy(request):
 
 def render_terms_of_service(request):
     return render(request,'terms_of_service.html')
+
+def render_get_started(request):
+    return render(request,'get_started.html')
+
+def handle_logout(request):
+    logout(request)
+    return redirect("core:index")

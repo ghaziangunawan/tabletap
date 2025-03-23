@@ -42,6 +42,7 @@ class sign_up_form(forms.Form):
 class login_form(forms.Form):
     email = forms.EmailField()
     password = forms.CharField()
+    remember_me = forms.BooleanField(required=False)
 
     def clean(self):
         cleaned_data = super().clean()
@@ -49,16 +50,11 @@ class login_form(forms.Form):
         password = cleaned_data.get("password")
 
         if email and password:
-            print(email)
-            print(password)
             user = authenticate(username=email, password=password)
-            print(user)
             if user is None:
-                print("false")
                 raise ValidationError("Invalid login credentials")
             self.user = user
         return cleaned_data
     
     def get_user(self):
         return getattr(self, 'user', None)
-

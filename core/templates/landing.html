@@ -8,9 +8,15 @@
             <div class="self-center">
                 <p class="self-center mt-5 mb-5 md:mt-15 md:mb-10 text-sm sm:text-xl md:text-2xl xl:text-5xl text-gray-600 text-center">From menu creation to order fulfillment, tabletap simplify the entire process so you can focus on serving your customers</p>
             </div>
-            <div class="cta-buttons self-center flex flex-col gap-y-2 sm:flex-row md:flex-row">
-                <a class="mr-2  bg-white text-gray-800 text-xs sm:text-base md:text-xl xl:text-4xl rounded-4xl shadow px-2 py-1 md:px-8 md:py-1 xl:py-5 hover:bg-gray-100" href="{% url 'core:get_started' %}">😎 Get Started</a>
-            </div>
+            {% if user.is_authenticated %}
+                <div class="cta-buttons self-center flex flex-col gap-y-2 sm:flex-row md:flex-row">
+                    <a class="mr-2  bg-white text-gray-800 text-xs sm:text-base md:text-xl xl:text-4xl rounded-4xl shadow px-2 py-1 md:px-8 md:py-1 xl:py-5 hover:bg-gray-100" href="{% url 'dashboard:dashboard' %}">📊 Go to Dashboard</a>
+                </div>
+            {% else %}
+                <div class="cta-buttons self-center flex flex-col gap-y-2 sm:flex-row md:flex-row">
+                    <a class="mr-2  bg-white text-gray-800 text-xs sm:text-base md:text-xl xl:text-4xl rounded-4xl shadow px-2 py-1 md:px-8 md:py-1 xl:py-5 hover:bg-gray-100" href="{% url 'core:get_started' %}">😎 Get Started</a>
+                </div>
+            {% endif %}
         </div>
     </section>
 

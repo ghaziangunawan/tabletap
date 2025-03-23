@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('core.urls', namespace='core')),
     path('dashboard/',include('dashboard.urls',namespace='dashboard')),
-    path('customer/',include('customer.urls',namespace='customer'))
+    path('customer/',include('customer.urls',namespace='customer')),
+    path('accounts/', include('allauth.urls'))
 ]
